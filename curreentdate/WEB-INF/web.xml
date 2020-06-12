@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-name>CurrentDate</servlet-name>
+		<servlet-class>currentdate.servlet.CurrentDate</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CurrentDate</servlet-name>
+		<url-pattern>/cdate</url-pattern>
+	</servlet-mapping>
+
+</web-app>

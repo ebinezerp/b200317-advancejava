@@ -1,0 +1,96 @@
+to generate dynamic response
+
+
+when a client send request to server 
+
+
+http url
+
+
+client and server -ipaddress (public ip)
+
+http://ipaddress:portnumber/application/resources
+
+
+
+
+https://facebook.com
+
+dns -
+
+
+facebook.com, co.in, .org, co.uk, .edu
+
+
+DHCP 
+
+
+
+http/https-> 
+
+default portnumber for tomcat is 8080
+
+demoapp
+
+ipaddress -> system
+              service1 - mailservice
+              service2 - fileserver
+              service3 - application server
+
+                            deploy - multiple applications
+
+
+resource -> index.html, abc.png, xyz.txt
+
+
+
+
+
+http://ipaddress:8080/demoapp/abc.html - static 
+
+
+url ->
+
+servlet -> configure one url 
+
+
+http://ipaddress:8080/demoapp/demo
+
+web.xml 
+
+
+  instance 
+
+  web-container is responsible for creating instances for servlet
+  ServletRequest and ServletResponse
+
+
+
+  web-container calls 
+
+  init() - to intialize the servlet properties 
+       executes only for the first request
+
+
+  service() - function that need to happen for request
+      executes for every request. 
+  destroy() - to release all the external resources 
+       at time of removing servlet or stop the server
+
+
+
+
+  app/demo - init(), service()
+  app/demo - service()
+  app/demo - service();
+
+
+  init() service() destroy() 
+
+ jar -cvf demoapp.war .
+
+
+
+ display current date.
+
+

@@ -1,0 +1,105 @@
+standalone:
+ That we install in local device and all the parts of all application are reside in same device.
+
+
+  notepad
+  msword
+  vlc
+  cal
+
+
+  codebase interface database 
+
+
+ note -> intaracting , save , executing 
+
+ desktop dairies
+ desktop todo applications
+ desktop calanders
+
+ installed, excuting , storing 
+
+
+distributed:
+
+ where different parts of application reside in different systems
+ 
+ swiggy ->
+
+ install
+ signup
+ sigin
+   location
+   search for restaurants
+   filter restaurants based on rating
+   filter on food items
+   select restaurant
+   select item and place order
+   ....
+   ....
+
+ 
+
+10 times 
+
+
+new mobile 
+  install 
+  sigin
+   
+
+app -executing - mobile
+data storing - not in mobile -> some-where-else
+
+
+2 type of systems
+
+  1.client -> access
+  2.server -> provides
+
+
+client - network - server
+
+
+
+
+types of applications 
+  
+  1. Desktop applications
+      install in our desktop and perform operations
+
+      a. standalone - notepad
+      b. distributed - slack 
+
+
+  2. Web application
+      application that we access through browser 
+
+      distributed 
+
+      client (browser) ->    <-server
+
+      a. static web applications 
+              review webpages
+              blogspot.
+              w3schools, javatpoint
+      b. dynamic web applications
+
+               online currency convertor
+
+	client->  Rupee ->   server (process) -> dollars -> client
+
+            moive reviews
+                 article / post -> comment or reply for comment
+            amazon/flipkart - Enterprise applications
+                 goods (latest, most purchased, most rated, recently visited, offers), select cart, purchase, security payment, delivery info, previous purchase info, return 
+            
+  3. Mobile apps
+         standalone - todo 
+         distributed - facebook,twitter etc..
+
+
+
+
+
+
