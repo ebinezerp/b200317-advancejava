@@ -1,0 +1,118 @@
+-> BASICS of creating a servlet application
+-> deploying the application
+
+http status code
+
+404 file not found 
+
+
+
+2xx -> request succesfull status
+3xx -> request redirect status
+    -> abc resource -> another resource (xyz)
+
+4xx -> request error status
+
+5xx -> server side error 
+
+
+
+different creating servlet
+
+Servlet (I)
+
+GenericServlet
+HttpServlet
+
+notepad
+
+IDE
+
+
+
+
+public class Demo implments Servlet{
+
+  init()
+  service()
+  destroy()
+  getServletInfo()
+  getServletConfig()
+
+}
+
+GenericServlet (AC) implements Servlet{
+ 
+  init(){}
+  destroy() {}
+  getServletInfo(){}
+  getServletConfig(){}
+ 
+}
+
+
+public class DemoServlet extends GenericServlet{
+
+  public void service(){}
+
+
+}
+
+
+
+
+
+HttpServlet (AC) extends GenericServlet{
+
+   service(){
+   }
+
+   doGet()
+   doPost()
+   doPut()
+   doHead()
+   doDelete()
+}
+
+
+public class DemoServlet extends HttpServlet{
+
+
+}
+
+
+Servlet, GenericServlet -> can handle all types of requests (ftp,smtp,http...)
+
+
+web -> http/https
+
+   GET   -> REQUEST DATA FROM SERVER -> directly request from url bar
+   POST ->  Send any data from client side to server side
+
+     forms 
+
+    request 
+         header url
+         body
+
+    1. 
+    2. security 
+    3. GET -> 2KB
+    4. multimedia pics, video, auido -> POST
+
+
+
+   GET is more fast than POST
+
+
+   PUT -> update data at server side
+   DELETE -> to delete data at server side
+   HEAD -> to send only header info
+
+
+
+
+   request current date from server
+
+
+
