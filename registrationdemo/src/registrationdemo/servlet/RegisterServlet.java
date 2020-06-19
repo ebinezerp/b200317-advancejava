@@ -16,6 +16,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.mysql.cj.jdbc.Driver;
 
+import registrationdemo.util.DBConnection;
+
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
 
@@ -53,9 +55,7 @@ public class RegisterServlet extends HttpServlet {
 		} else {
 
 			try {
-				DriverManager.registerDriver(new Driver());
-				Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/registerdemo", "root",
-						"root");
+				Connection con = new DBConnection().getConnection();
 
 				PreparedStatement ps = con.prepareStatement(
 						"insert into user(firstname,lastname,email,mobile,username,password) values(?,?,?,?,?,?)");
@@ -69,7 +69,9 @@ public class RegisterServlet extends HttpServlet {
 
 				int count = ps.executeUpdate();
 				if (count > 0) {
-					out.print("Registration is sucessfull");
+					// request.getRequestDispatcher("login.html").forward(request, response);
+					response.sendRedirect("login.html");
+
 				} else {
 					out.print("Error occured try again");
 				}
