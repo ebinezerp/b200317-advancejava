@@ -9,5 +9,26 @@
 </head>
 <body>
 	<%@include file="headerpage.jsp"%>
+
+	<section class="registration">
+		<div id="content">
+			<div class="nav">
+				<a href="hotelreg.jsp">Register Your Hotel Here For Business</a>
+			</div>
+			<div class="reg-form">
+
+				<h1>Customer Registration</h1>
+				<form></form>
+
+			</div>
+		</div>
+
+	</section>
+
+
+
+
+
+
 </body>
 </html>
