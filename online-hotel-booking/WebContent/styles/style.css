@@ -1,0 +1,81 @@
+@charset "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+}
+
+header {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	padding: 2%;
+	background-color: #5A5AFF;
+}
+
+header>div#brand>a {
+	flex: 1;
+	display: flex;
+}
+
+header>div#brand>a>img {
+	flex-basis: 10%;
+	width: 100%;
+}
+
+header>div#brand>a>h1 {
+	flex-basis: 85%;
+	color: white;
+}
+
+header>nav {
+	flex: 2;
+	display: flex;
+	justify-content: flex-start;
+}
+
+header>nav>ul {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	list-style-type: none;
+}
+
+header>nav>ul>li {
+	flex-basis: 10%;
+	padding: 1%;
+	background-color: #F8F8FF;
+	margin-left: 2%;
+	border-radius: 5px;
+	text-align: center;
+	align-self: center;
+}
+
+header>nav>ul>li:hover {
+	background-color: #CD853F;
+}
+
+section {
+	margin-top: 5%;
+}
+
+section#reg {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+
+section#reg>div#hotel-reg, section#reg>div#customer-reg {
+	width: 35%;
+	margin: 2%;
+	border: 1px solid black;
+	height: 500px;
+}
