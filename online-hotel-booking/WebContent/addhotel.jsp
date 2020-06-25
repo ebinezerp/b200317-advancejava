@@ -18,7 +18,7 @@
 			<div class="reg-form">
 
 				<h1>Hotel Registration</h1>
-				<form>
+				<form action="">
 					<table>
 						<tr>
 							<td><label>Hotel Name</label></td>
@@ -39,7 +39,7 @@
 							</select></td>
 						</tr>
 						<tr>
-							<td colspan="2"><label>Type of Room Available</label></td>
+							<td colspan="2"><label><b>Type of Room Available</b></label></td>
 						</tr>
 						<tr>
 							<td><label>Luxry AC Single Room(Price)</label></td>
@@ -60,6 +60,26 @@
 						<tr>
 							<td><label>Normal Double Room</label></td>
 							<td><input type="checkbox" name="roomtype" value="n-d" /></td>
+						</tr>
+						<tr>
+							<td colspan="2"><label><b>Facilities</b></label></td>
+						</tr>
+						<tr>
+							<td>AC</td>
+							<td><input type="checkbox" name="facilities" value="ac" /></td>
+						</tr>
+						<tr>
+							<td>Gym</td>
+							<td><input type="checkbox" name="facilities" value="gym" /></td>
+						</tr>
+						<tr>
+							<td>Swimming Pool</td>
+							<td><input type="checkbox" nam="facilities" value="pool" /></td>
+						</tr>
+
+						<tr>
+							<td colspan="2" align="center"><input type="submit"
+								value="Register" /></td>
 						</tr>
 					</table>
 

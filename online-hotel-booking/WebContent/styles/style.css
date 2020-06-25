@@ -80,22 +80,31 @@ section#reg>div#hotel-reg, section#reg>div#customer-reg {
 	height: 500px;
 }
 
-section.registration {
+section.registration, section.login {
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
-section.registration>div#content {
+section.registration>div#content, section.login>div#content {
 	flex-basis: 50%;
 }
 
-section.registration>div#content>div.nav {
+section.registration>div#content>div.nav, section.login>div#content>div.nav
+	{
 	padding: 4%;
 	text-align: center;
+	display: flex;
+	flex-flow: column;
 }
 
-section.registration>div#content>div.nav>a {
+section.registration>div#content>div.nav>h1, section.login>div#content>div.nav>h1
+	{
+	color: black;
+}
+
+section.registration>div#content>div.nav>a, section.login>div#content>div.nav>a
+	{
 	padding: 4%;
 	border: 2px solid black;
 	background-color: #000080;
@@ -105,25 +114,34 @@ section.registration>div#content>div.nav>a {
 	border-radius: 10px;
 }
 
-section.registration>div#content>div.reg-form {
+section.registration>div#content>div.reg-form, section.login>div#content>div.login-form
+	{
 	margin-top: 5%;
 }
 
-section.registration>div#content>div.reg-form>h1 {
+section.registration>div#content>div.reg-form>h1, section.login>div#content>div.login-form>h1
+	{
 	text-align: center;
 }
 
-section.registration>div#content>div.reg-form>form {
+section.registration>div#content>div.reg-form>form, section.login>div#content>div.login-form>form
+	{
 	margin-top: 2%;
 	display: flex;
 	justify-content: center;
 }
 
-section.registration>div#content>div.reg-form>form>table {
+section.registration>div#content>div.reg-form>form>table, section.login>div#content>div.login-form>form>table
+	{
 	width: 70%;
 }
 
-section.registration>div#content>div.reg-form>form>table>tr>td {
+section.registration>div#content>div.reg-form>form>table>tr>td, section.login>div#content>div.login-form>form>table>tr>td
+	{
 	text-align: left;
 	padding-right: 3%;
+}
+
+span.errMsgs {
+	color: red;
 }

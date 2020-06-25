@@ -13,7 +13,8 @@
 	<section class="registration">
 		<div id="content">
 			<div class="nav">
-				<a href="hotelreg.jsp">Register Your Hotel Here For Business</a>
+				<a href="hotelmanagmentreg.jsp">Hotel Mangment - Register Your
+					Hotel Here For Business</a>
 			</div>
 			<div class="reg-form">
 

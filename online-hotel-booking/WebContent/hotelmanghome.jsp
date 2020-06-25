@@ -8,17 +8,6 @@
 <%@include file="links.jsp"%>
 </head>
 <body>
-	<%@include file="headerpage.jsp"%>
-
-	<section>
-		<div>
-			<a href="hotelmanglogin.jsp">Customer Login</a>
-		</div>
-		<div>
-			<a href="customerlogin.jsp">Hotel Login</a>
-		</div>
-	</section>
-
-
+	<%@include file="hotelmangheader.jsp"%>
 </body>
 </html>
