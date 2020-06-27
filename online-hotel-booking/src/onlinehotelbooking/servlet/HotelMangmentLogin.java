@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import onlinehotelbooking.dto.HotelManagement;
 import onlinehotelbooking.util.DBConnection;
 
 @WebServlet("/hotellogin")
@@ -34,9 +35,18 @@ public class HotelMangmentLogin extends HttpServlet {
 			ResultSet rs = ps.executeQuery();
 
 			if (rs.next()) {
+
+				HotelManagement hotelManagement = new HotelManagement();
+				hotelManagement.setId(rs.getInt("id"));
+				hotelManagement.setFullname(rs.getString("fullname"));
+				hotelManagement.setEmail(rs.getString("email"));
+				hotelManagement.setMobile(rs.getString("mobile"));
+				hotelManagement.setUsername(rs.getString("username"));
+				hotelManagement.setPassword(rs.getString("password"));
+
 				HttpSession session = request.getSession();
 
-				session.setAttribute("resultSet", rs);
+				session.setAttribute("hotelManagment", hotelManagement);
 
 				response.sendRedirect("hotelmanghome.jsp");
 			} else {

@@ -25,32 +25,32 @@
 							<td><label>Full name</label></td>
 							<td><input type="text" name="fullname"
 								value="${param['fullname']}" /></td>
-							<td><span class="errMsgs">${fullnameError}</span></td>
+							<td><span class="errMsgs">${errorMessages.fullnameError}</span></td>
 						</tr>
 						<tr>
 							<td><label>Email</label></td>
 							<td><input type="email" name="email"
 								value="${param['email']}" /></td>
-							<td><span class="errMsgs">${emailError} </span></td>
+							<td><span class="errMsgs">${errorMessages.emailError} </span></td>
 						</tr>
 						<tr>
 							<td><label>Mobile</label></td>
 							<td><input type="tel" name="mobile"
 								value="${param['mobile']}" /></td>
-							<td><span class="errMsgs">${mobileError} </span></td>
+							<td><span class="errMsgs">${errorMessages.mobileError} </span></td>
 						</tr>
 						<tr>
 							<td><label>Username</label></td>
 							<td><input type="text" name="username"
 								value="${param['username']}" /></td>
-							<td><span class="errMsgs"> ${usernameError} </span></td>
+							<td><span class="errMsgs"> ${errorMessages.usernameError} </span></td>
 						</tr>
 
 						<tr>
 							<td><label>Password</label></td>
 							<td><input type="password" name="password"
 								value="${param['password']}" /></td>
-							<td><span class="errMsgs"> ${passwordError} </span></td>
+							<td><span class="errMsgs"> ${errorMessages.passwordError} </span></td>
 						</tr>
 
 						<tr>

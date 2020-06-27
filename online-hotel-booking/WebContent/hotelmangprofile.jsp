@@ -13,34 +13,26 @@
 <body>
 	<%@include file="hotelmangheader.jsp"%>
 
-	<c:if test="${resultSet!=null}">
-		<%-- 
-	<%
-		
-		ResultSet rs = (ResultSet) session.getAttribute("resultSet");
-	%> --%>
-
-
-		<c:set var="rs" value="${resultSet}"></c:set>
+	<c:if test="${hotelManagment!=null}">
 
 
 		<section class="profile">
 			<table>
 				<tr>
 					<td>Fullname</td>
-					<td><%=rs.getString("fullname")%></td>
+					<td>${hotelManagment.fullname}</td>
 				</tr>
 				<tr>
 					<td>Email</td>
-					<td><%=rs.getString("email")%></td>
+					<td>${hotelManagment.email}</td>
 				</tr>
 				<tr>
 					<td>Mobile</td>
-					<td><%=rs.getString("mobile")%></td>
+					<td>${hotelManagment.mobile}</td>
 				</tr>
 				<tr>
 					<td>Username</td>
-					<td><%=rs.getString("username")%></td>
+					<td>${hotelManagment.username}</td>
 				</tr>
 			</table>
 		</section>
