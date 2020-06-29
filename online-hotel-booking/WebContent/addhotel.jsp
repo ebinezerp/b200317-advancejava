@@ -18,28 +18,33 @@
 			<div class="reg-form">
 
 				<h1>Hotel Registration</h1>
-				<form action="">
+				<form action="addhotel" method="POST">
 					<table>
 						<tr>
 							<td><label>Hotel Name</label></td>
 							<td><input type="text" name="hotelname" /></td>
+							<td><span class="errMgs">${errorMessages.hotelNameError}</span></td>
 						</tr>
 						<tr>
 							<td><label>GST No</label></td>
 							<td><input type="text" name="gst" /></td>
+							<td><span class="errMgs">${errorMessages.gstError}</span></td>
 						</tr>
 						<tr>
 							<td><label>Hotel Rating</label></td>
 							<td><select name="rating">
-									<option index="-1">Select Rating</option>
+									<option value="1">1 Star</option>
 									<option value="2">2 Star</option>
 									<option value="3">3 Star</option>
 									<option value="4">4 Star</option>
 									<option value="5">5 Star</option>
 							</select></td>
+							<td><span class="errMgs">${errorMessages.ratingError}</span></td>
 						</tr>
 						<tr>
 							<td colspan="2"><label><b>Type of Room Available</b></label></td>
+							<td><span class="errMgs">${errorMessages.roomTypeError}</span></td>
+							<td><span class="errMgs">${roomTypeError}</span></td>
 						</tr>
 						<tr>
 							<td><label>Luxry AC Single Room(Price)</label></td>
@@ -63,6 +68,8 @@
 						</tr>
 						<tr>
 							<td colspan="2"><label><b>Facilities</b></label></td>
+							<td><span class="errMgs">${errorMessages.facilitiesError}</span></td>
+							<td><span class="errMgs">${facilitiesError}</span></td>
 						</tr>
 						<tr>
 							<td>AC</td>
