@@ -1,9 +1,6 @@
 package onlinehotelbooking.servlet;
 
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.servlet.ServletException;
@@ -14,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import onlinehotelbooking.dto.HotelManagement;
-import onlinehotelbooking.util.DBConnection;
+import onlinehotelbooking.services.HotelMangmentService;
 
 @WebServlet("/hotellogin")
 public class HotelMangmentLogin extends HttpServlet {
@@ -27,28 +24,15 @@ public class HotelMangmentLogin extends HttpServlet {
 		String password = request.getParameter("password");
 
 		try {
-			Connection con = new DBConnection().getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from hotelmang where username=? and password = ?");
-			ps.setString(1, username);
-			ps.setString(2, password);
+			HotelMangmentService hotelMangmentService = new HotelMangmentService();
+			HotelManagement hotelManagement = hotelMangmentService.login(username, password);
 
-			ResultSet rs = ps.executeQuery();
-
-			if (rs.next()) {
-
-				HotelManagement hotelManagement = new HotelManagement();
-				hotelManagement.setId(rs.getInt("id"));
-				hotelManagement.setFullname(rs.getString("fullname"));
-				hotelManagement.setEmail(rs.getString("email"));
-				hotelManagement.setMobile(rs.getString("mobile"));
-				hotelManagement.setUsername(rs.getString("username"));
-				hotelManagement.setPassword(rs.getString("password"));
+			if (hotelManagement != null) {
 
 				HttpSession session = request.getSession();
-
 				session.setAttribute("hotelManagment", hotelManagement);
-
 				response.sendRedirect("hotelmanghome.jsp");
+
 			} else {
 				request.setAttribute("errorMsg", "Invalid Credentials");
 				request.getRequestDispatcher("hotelmanglogin.jsp").forward(request, response);
@@ -56,6 +40,8 @@ public class HotelMangmentLogin extends HttpServlet {
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			request.setAttribute("errorMsg", "Database Connection is not established. Try again..");
+			request.getRequestDispatcher("hotelmanglogin.jsp").forward(request, response);
 		}
 
 	}
