@@ -1,0 +1,82 @@
+
+
+for core java - file= EntityName.mapping.xml
+for web - resource= EntityName.hbm.xml
+
+
+different DB have different ways of auto generation of key
+
+MySQL - auto increment
+MSSQL - identity
+Oracle - sequence
+
+
+ANSI SQL-> common for all Databases
+
+MySQL -> int,char, varchar
+Oracle -> number,char,varchar2
+
+Dialect -> 
+
+
+
+
+Hindi -> National Language
+
+   Hyd   -> hyd dialect
+   New Dehli hyd dialect
+   Culcatta 
+
+
+
+hibernate -> For every Database Dialects are given
+
+
+
+MySQL from 6th Version -> default database is MySQLinnoDB
+
+MySQL server -> DB engines
+
+
+hibernate.hbm2ddl.auto - validate, create, create-drop, update
+
+   validate -> just validates the hiberate queries
+
+   create (create,alter,drop) -> at intialization of sessionFactory its creates the tables. If the tables are already existed then it drops the tables and creates the new tables.
+
+   create-drop (create,alter,drop) -> at intialization of sessionFactory it creates the tables and on close of sessionFactory its drops all the tables. If the tables are already existed then it drops the tables and creates the new tables.
+
+  update (create,alter) -> at intialization of sessionFactory it creates the tables and if any changes occurs it updates the table structure. But this value won't drop the tables.
+
+
+
+
+insert into student(sid,sname,email) values (1,'ravi','ravi@gmail.com');
+
+insert into student
+   (sid, sname, email) values (1,'ravi','ravi@gmail.com');
+
+
+
+SQL:
+
+select * from student where email = ?
+
+
+HQL:
+
+is only for fetching
+
+from Student where email=: value
+
+
+
+
+
+
+
+
+
+
+
+
