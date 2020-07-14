@@ -38,7 +38,7 @@ public class HotelMangmentLogin extends HttpServlet {
 				request.getRequestDispatcher("hotelmanglogin.jsp").forward(request, response);
 			}
 
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			request.setAttribute("errorMsg", "Database Connection is not established. Try again..");
 			request.getRequestDispatcher("hotelmanglogin.jsp").forward(request, response);

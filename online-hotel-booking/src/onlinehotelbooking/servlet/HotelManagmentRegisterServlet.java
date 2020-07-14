@@ -46,7 +46,7 @@ public class HotelManagmentRegisterServlet extends HttpServlet {
 			request.setAttribute("errorMessages", errorMessages);
 			request.getRequestDispatcher("hotelmanagmentreg.jsp").forward(request, response);
 		} else {
-			try {
+			/* try { */
 				HotelMangmentService hotelMangmentService = new HotelMangmentService();
 
 				boolean result = hotelMangmentService.save(hotelManagement);
@@ -58,11 +58,11 @@ public class HotelManagmentRegisterServlet extends HttpServlet {
 					request.getRequestDispatcher("hotelmanagmentreg.jsp").forward(request, response);
 				}
 
-			} catch (SQLException e) {
+			/*} catch (SQLException e) {
 				e.printStackTrace();
 				request.setAttribute("errorMsg", "Database Connection is not established. Try again..");
 				request.getRequestDispatcher("hotelmanagmentreg.jsp").forward(request, response);
-			}
+			}*/
 		}
 	}
 
