@@ -2,6 +2,7 @@ package hibernatedemo;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.query.Query;
 
@@ -65,10 +66,45 @@ public class App {
 		 * System.out.println(fetechedStd);
 		 */
 
-		Query<Student> query = session.createQuery("from Student where email=:std_mail", Student.class);
-		query.setParameter("std_mail", "geetha@gmail.com");
-		Student fetechedStd = query.getSingleResult();
-		System.out.println(fetechedStd);
+		/*
+		 * Query<Student> query =
+		 * session.createQuery("from Student where email=:std_mail", Student.class);
+		 * query.setParameter("std_mail", "geetha@gmail.com"); Student fetechedStd =
+		 * query.getSingleResult(); System.out.println(fetechedStd);
+		 */
+
+		/*
+		 * Address address = new Address(); address.setCity("Hyderabad");
+		 * address.setState("Telangana"); address.setCountry("India");
+		 * address.setZipCode("500030"); address.setStudent(std);
+		 * 
+		 * Transaction tx = session.beginTransaction(); try { session.save(std);
+		 * session.save(address); tx.commit(); } catch (Exception e) {
+		 * e.printStackTrace(); tx.rollback(); } finally { session.clear();
+		 * session.close(); }
+		 */
+		
+		
+		/*
+		 * session = sessionFactory.openSession(); Query<Student> query =
+		 * session.createQuery("From Student where email=: mail", Student.class);
+		 * query.setParameter("mail", "geetha123@gmail.com"); Student fetechedStudent =
+		 * query.getSingleResult();
+		 * 
+		 * System.out.println(fetechedStudent);
+		 */
+		/*
+		 * session = sessionFactory.openSession();
+		 * 
+		 * Query<Address> query=
+		 * session.createQuery("From Address where id=: id_value",Address.class);
+		 * query.setParameter("id_value", 1); Address fetechedAddress =
+		 * query.getSingleResult();
+		 * 
+		 * System.out.println(fetechedAddress);
+		 */
+
+		sessionFactory.close();
 
 	}
 

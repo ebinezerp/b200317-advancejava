@@ -2,6 +2,7 @@
     <wb-module deploy-name="online-hotel-booking">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/test"/>
         <property name="context-root" value="online-hotel-booking"/>
         <property name="java-output-path" value="/online-hotel-booking/build/classes"/>
     </wb-module>

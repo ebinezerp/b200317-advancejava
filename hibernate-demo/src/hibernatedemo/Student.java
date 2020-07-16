@@ -1,28 +1,43 @@
 package hibernatedemo;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Student {
 
-	private Integer sid;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	@Column(nullable = false)
 	private String sname;
+	@Column(unique = true, nullable = false)
 	private String email;
+
+	@OneToOne(mappedBy = "student")
+	private Address address;
 
 	public Student() {
 		super();
 	}
 
-	public Student(Integer sid, String sname, String email) {
+	public Student(Integer id, String sname, String email) {
 		super();
-		this.sid = sid;
+		this.id = id;
 		this.sname = sname;
 		this.email = email;
 	}
 
-	public Integer getSid() {
-		return sid;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setSid(Integer sid) {
-		this.sid = sid;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getSname() {
@@ -43,7 +58,7 @@ public class Student {
 
 	@Override
 	public String toString() {
-		return "Student [sid=" + sid + ", sname=" + sname + ", email=" + email + "]";
+		return "Student [sid=" + id + ", sname=" + sname + ", email=" + email + "]";
 	}
 
 }

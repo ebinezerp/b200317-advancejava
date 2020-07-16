@@ -100,6 +100,39 @@ public class HotelMangmentService {
 		}
 
 		return null;
+	}
+
+	public boolean delete(HotelManagement hotelManagement) {
+		Session session = sessionFactory.openSession();
+		Transaction tx = session.beginTransaction();
+		try {
+			session.delete(hotelManagement);
+			tx.commit();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			tx.rollback();
+		} finally {
+			session.clear();
+			session.close();
+		}
+
+		return false;
+	}
+
+	public HotelManagement getHotelManagement(Integer id) {
+
+		Session session = sessionFactory.openSession();
+		try {
+			return session.get(HotelManagement.class, id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			session.clear();
+			session.close();
+		}
+
+		return null;
 
 	}
 
