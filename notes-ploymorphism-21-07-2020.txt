@@ -1,0 +1,41 @@
+Ploymorphism:
+many forms
+
+1. Static Ploymorphism (compile time polymorphism)
+     
+    method overloading:-
+  
+    Defining two or more methods with same name but with
+    different method signature 
+
+    To define same functionality with different number
+    of parameters or different type of parameters
+
+    greatestNo(int num1, int num2);
+    greatestNo(int num1, int num2, int num3);
+
+
+   1. Train No
+   2. Train Name
+   3. source and destination
+
+
+   search(int trainNo);
+   search(String trainName);
+   search(String source, String destination);
+
+
+ 1. 
+
+
+
+ modifieres returntype methodName(parameters);
+
+   Train search(int trainNo);
+   Train[] search(String trainName);
+   Train[] search(String source, String destination);
+ 
+
+
+
+2. dynamic Ploymorphism (runtime ploymorphism)

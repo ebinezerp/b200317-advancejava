@@ -1,0 +1,68 @@
+Maven Tool - Build Tool
+Gradle
+Ant 
+
+1. directory structure -> develop ->(managing jar files)- Junit -> build war -> deloyped
+2. server configuration
+3. lib jar attachment
+4. developing (MVC,DAO,DTO)
+5. JUNIT
+
+
+validation (all files are available)
+compilation (compiles the source code)
+test (JUNIT test cases will be executed)
+build (creates are build (jar/war))
+deploy - deploys in prod evn 
+
+
+feature 
+
+   dependencey management 
+      manages the project dependent jar files
+
+
+
+Maven has one centralized repository where all jar files are
+located.
+
+  maven repository 
+
+ 
+
+1. install maven in our local system
+     cmd 
+
+
+1. artifactId - represents application
+2. groupId - project
+
+
+
+
+
+
+
+mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-webapp -DarchetypeVersion=1.4
+
+
+to import into eclipse
+
+mvn eclipse:eclipse
+
+
+
+pom.xml - Project Object Model 
+
+
+to use junit 5 
+
+    add dependencies 
+        1. junit-jupiter-engine
+        2. junit-platform-runner
+
+2. maven plugin for IDE 
+
+
+
+

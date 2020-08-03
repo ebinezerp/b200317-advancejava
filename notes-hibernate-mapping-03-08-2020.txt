@@ -1,0 +1,130 @@
+Hibernate
+   Mapping
+   HAS - A 
+     one-to-one
+     one-to-many
+     many-to-one
+     many-to-many
+
+
+ Bidirectional mapping-> we can maintain HAS-A b/w two classes from both direction
+
+  Author
+      Book
+
+  Book 
+    Author
+
+
+ When we maintain bi-directional mapping an extra column will be created, in main table.
+
+   Author (id,name,noOfBooks)
+   Book (id,name,price)
+
+  Table: 
+     consider Author is main table
+
+       Author table: 
+          id, name, noOfBooks, book_id
+       Book table:
+          id, name, price, author_id
+
+
+ An extra mapping column(book_id) will be created in Main table. (Author)   
+
+ To avoid an extra column, we use an attribute called "mappedby".
+
+
+
+
+One-to-Many:
+======================
+
+Where one Author can write multiple books.
+One Book is written by One author
+
+Expected:
+
+Author -> 
+id, name,noOfBooks,book_id
+ 1    A     5        B001
+ 1    A     5        B002
+
+
+
+Book -> id, name, price.
+
+Created:
+
+
+Table Structure with @OneToMany in Author
+
+
+Author:
+  id, name, noOfBooks
+   1   A      5
+
+Book:
+  id, name, price
+
+Author_Book
+   author_id, book_id
+      1         B001
+      1         B002
+
+
+
+@ManyToOne -> Single Reference Type
+
+
+Table Structure with @OneToMany in Author class and @ManyToOne in Book.
+
+
+
+Author:
+  id, name, noOfBooks
+   1   A      5
+
+Book:
+  id, name, price, author_id
+B001   Java   200    1
+B002   C++    150    1 
+
+Author_Book
+   author_id, book_id
+      1         B001
+      1         B002
+
+
+
+
+Many to Many:
+===================
+
+
+One Author Can write multiple books
+One Book Can be written by Multiple Authors
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
